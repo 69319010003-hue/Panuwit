@@ -1,0 +1,15 @@
+{
+  "name": "69319010003",
+  "version": "1.0.0",
+  "description": "ระบบแจ้งซ่อมคอมพิวเตอร์และอุปกรณ์ของวิทยาลัย (Back-End API)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [
+    "repair-system",
+    "backend-api"
+  ],
+  "author": "69319010003",
+  "license": "ISC"
+}
