@@ -1,0 +1,40 @@
+<mxfile host="Electron" agent="ChatGPT">
+  <diagram id="uml-repair-system" name="UML ระบบแจ้งซ่อม">
+    <mxGraphModel dx="1536" dy="945" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="room" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=7;fillColor=#FFFFFF;strokeColor=#238B83;strokeWidth=2;fontColor=#111111;fontSize=13;" value="&lt;b&gt;ห้องปฏิบัติการ (Room)&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;padding:5px&#39;&gt;- int รหัสห้อง&lt;br&gt;- string หมายเลขห้อง&lt;br&gt;- string อาคาร&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;padding:5px&#39;&gt;+ เพิ่มข้อมูลห้อง() : void&lt;br&gt;+ แก้ไขข้อมูลห้อง() : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="300" x="390" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=7;fillColor=#FFFFFF;strokeColor=#9560A8;strokeWidth=2;fontColor=#111111;fontSize=13;" value="&lt;b&gt;ผู้ใช้งาน (User)&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;padding:5px&#39;&gt;- int รหัสผู้ใช้&lt;br&gt;- string ชื่อผู้ใช้&lt;br&gt;- string รหัสผ่าน&lt;br&gt;- string ชื่อ-นามสกุล&lt;br&gt;- string บทบาทหน้าที่&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;padding:5px&#39;&gt;+ เข้าสู่ระบบ() : boolean&lt;br&gt;+ ออกจากระบบ() : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="310" x="35" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="computer" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=7;fillColor=#FFFFFF;strokeColor=#D58A3C;strokeWidth=2;fontColor=#111111;fontSize=13;" value="&lt;b&gt;เครื่องคอมพิวเตอร์ (Computer)&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;padding:5px&#39;&gt;- int รหัสเครื่อง&lt;br&gt;- string รหัสคอมพิวเตอร์&lt;br&gt;- string ชื่อห้องและรุ่น&lt;br&gt;- string สถานะการใช้งาน&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;padding:5px&#39;&gt;+ เพิ่มข้อมูลเครื่อง() : void&lt;br&gt;+ แก้ไขข้อมูลเครื่อง() : void&lt;br&gt;+ ดูประวัติการซ่อม() : List&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="330" x="735" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="request" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=7;fillColor=#FFFFFF;strokeColor=#238A91;strokeWidth=2;fontColor=#111111;fontSize=13;" value="&lt;b&gt;ใบแจ้งซ่อม (RepairRequest)&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;padding:5px&#39;&gt;- int รหัสใบแจ้งซ่อม&lt;br&gt;- string รายละเอียดอาการเสีย&lt;br&gt;- string สถานะการซ่อม&lt;br&gt;- string ระดับความเร่งด่วน&lt;br&gt;- datetime วันที่แจ้งซ่อม&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;padding:5px&#39;&gt;+ สร้างใบแจ้งซ่อม() : void&lt;br&gt;+ ยกเลิกคำขอแจ้งซ่อม() : boolean&lt;br&gt;+ แสดงรายละเอียดการแจ้งซ่อม(รหัสคำขอ) : void&lt;br&gt;+ อัปเดตสถานะการซ่อม(สถานะ) : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="430" x="330" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="log" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=7;fillColor=#FFFFFF;strokeColor=#438A54;strokeWidth=2;fontColor=#111111;fontSize=13;" value="&lt;b&gt;บันทึกการซ่อม (RepairLog)&lt;/b&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;padding:5px&#39;&gt;- int รหัสบันทึก&lt;br&gt;- string วิธีแก้ไขปัญหา&lt;br&gt;- datetime วันที่ดำเนินการเสร็จ&lt;/div&gt;&lt;hr&gt;&lt;div style=&#39;text-align:left;padding:5px&#39;&gt;+ บันทึกการซ่อม() : void&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="310" x="390" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="room_computer" edge="1" parent="1" source="room" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;startArrow=diamond;startFill=1;" target="computer" value="1     ประกอบด้วย     1..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="user_request" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;" target="request" value="1     แจ้งซ่อม     0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="user_request_alt" edge="1" parent="1" source="user" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;dashed=1;" target="request" value="0..1     รับผิดชอบ     0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="computer_request" edge="1" parent="1" source="computer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;" target="request" value="1     มีประวัติการแจ้งซ่อม     0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="request_log" edge="1" parent="1" source="request" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#333333;strokeWidth=1.5;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#FFFFFF;startArrow=diamond;startFill=1;" target="log" value="1     มีบันทึกการซ่อม     0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

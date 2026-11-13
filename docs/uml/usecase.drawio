@@ -1,0 +1,82 @@
+<mxfile host="Electron">
+  <diagram id="usecase-repair-system" name="Use Case ระบบแจ้งซ่อม">
+    <mxGraphModel dx="1422" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- System Boundary -->
+        <mxCell id="sys" value="&lt;b&gt;ระบบแจ้งซ่อมคอมพิวเตอร์และอุปกรณ์ของวิทยาลัย&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;fillColor=#F8FAFC;strokeColor=#1E293B;strokeWidth=2;fontSize=15;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="250" y="30" width="660" height="750" as="geometry" />
+        </mxCell>
+        <!-- Actors -->
+        <mxCell id="actor_reporter" value="&lt;b&gt;ผู้แจ้งซ่อม&lt;/b&gt;&lt;br&gt;(นักศึกษา / ครูผู้สอน)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#DBEAFE;strokeColor=#1D4ED8;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="90" y="150" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_tech" value="&lt;b&gt;ช่างเทคนิค&lt;/b&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#CCFBF1;strokeColor=#0F766E;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="90" y="450" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_head" value="&lt;b&gt;หัวหน้างาน&lt;/b&gt;&lt;br&gt;(อาคารสถานที่และคอมพิวเตอร์)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F3E8FF;strokeColor=#7E22CE;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="450" width="40" height="80" as="geometry" />
+        </mxCell>
+        <!-- Base Login Use Case -->
+        <mxCell id="uc_login" value="&lt;b&gt;เข้าสู่ระบบ (Login)&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="660" y="70" width="180" height="65" as="geometry" />
+        </mxCell>
+        <!-- Reporter Use Cases -->
+        <mxCell id="uc_report" value="แจ้งซ่อมอุปกรณ์" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=1.5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="310" y="80" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_track" value="ติดตามสถานะและประวัติการแจ้งซ่อม" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=1.5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="310" y="160" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_cancel" value="ยกเลิกใบแจ้งซ่อม" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=1.5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="310" y="240" width="190" height="60" as="geometry" />
+        </mxCell>
+        <!-- Technician Use Cases -->
+        <mxCell id="uc_pending" value="ดูรายการงานรอซ่อม" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#0D9488;strokeWidth=1.5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="310" y="340" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_accept" value="รับงานซ่อม" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#0D9488;strokeWidth=1.5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="310" y="420" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_update" value="อัปเดตสถานะและบันทึกการซ่อม" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#0D9488;strokeWidth=1.5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="310" y="500" width="190" height="60" as="geometry" />
+        </mxCell>
+        <!-- Shared History Use Case -->
+        <mxCell id="uc_history" value="ดูประวัติการซ่อมของเครื่อง" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#4F46E5;strokeWidth=1.5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="480" y="680" width="200" height="60" as="geometry" />
+        </mxCell>
+        <!-- Head Use Cases -->
+        <mxCell id="uc_summary" value="ดูรายงานสรุปงานซ่อมแยกตามห้อง" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=1.5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="660" y="340" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_assign" value="มอบหมายงานด่วนให้ช่าง" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=1.5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="660" y="420" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_rooms" value="จัดการข้อมูลห้องปฏิบัติการ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=1.5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="660" y="500" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_devices" value="จัดการข้อมูลเครื่องคอมพิวเตอร์" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#9333EA;strokeWidth=1.5;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="660" y="580" width="210" height="60" as="geometry" />
+        </mxCell>
+        <!-- Actor Associations -->
+        <mxCell id="e1" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_reporter" target="uc_report"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_reporter" target="uc_track"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_reporter" target="uc_cancel"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_tech" target="uc_pending"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_tech" target="uc_accept"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_tech" target="uc_update"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_tech" target="uc_history"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_head" target="uc_summary"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_head" target="uc_assign"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_head" target="uc_rooms"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_head" target="uc_devices"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e12" style="endArrow=none;html=1;strokeWidth=1.5;" edge="1" parent="1" source="actor_head" target="uc_history"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- Include Relations to Login -->
+        <mxCell id="inc1" value="&amp;laquo;include&amp;raquo;" style="dashed=1;endArrow=open;endSize=10;html=1;strokeColor=#D97706;fontColor=#B45309;fontSize=12;" edge="1" parent="1" source="uc_report" target="uc_login"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="inc2" value="&amp;laquo;include&amp;raquo;" style="dashed=1;endArrow=open;endSize=10;html=1;strokeColor=#D97706;fontColor=#B45309;fontSize=12;" edge="1" parent="1" source="uc_accept" target="uc_login"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="inc3" value="&amp;laquo;include&amp;raquo;" style="dashed=1;endArrow=open;endSize=10;html=1;strokeColor=#D97706;fontColor=#B45309;fontSize=12;" edge="1" parent="1" source="uc_summary" target="uc_login"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
